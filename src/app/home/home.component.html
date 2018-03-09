@@ -1,0 +1,44 @@
+<form id="contact" #messageForm="ngForm" (ngSubmit)="sendMessage()">
+    <div *ngIf="sended">
+        <h5 *ngIf="success">Your message has been sent successfully!</h5>
+        <h5 *ngIf="!success">There was a problem sending the message :(</h5>
+    </div>
+
+    <label>Name:</label>
+    <input id="formName" type="text" name="formName"
+    placeholder="Your name:"
+    [(ngModel)]="newMessage.name" #formName="ngModel"
+    required>
+
+    <br>
+
+    <label>Email:</label>
+    <input id="formEmail" type="email" name="formEmail"
+    placeholder="Your email:"
+    [(ngModel)]="newMessage.email" #formEmail="ngModel"
+    required>
+
+    <br>
+
+    <label>Subject:</label>
+    <input id="formSubject" type="text" name="formSubject"
+    placeholder="Your subject:"
+    [(ngModel)]="newMessage.subject" #formSubject="ngModel"
+    required>
+
+    <br>
+
+    <label>Message:</label>
+    <textarea id="formMessage" rows="7" name="formMessage"
+        placeholder="Your message:"
+        [(ngModel)]="newMessage.content" #formMessage="ngModel"
+        required>
+    </textarea>
+
+    <br>
+
+    <button [disabled]="!messageForm.form.valid || sending"
+        type="submit">
+        {{ !sending?'Send Message':'Sending....' }}
+    </button>
+</form>
