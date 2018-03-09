@@ -49,6 +49,7 @@ $ tree
 │   ├── main.ts
 ```
 **Warning**: that isn't the full structure,
+
 **注意**: 上面的不是完整結構
 
 ### Explain
@@ -62,7 +63,7 @@ $ tree
 * index.html <- Where csrf-token inject and the main entry of front-end.
 * assets <- The default dictionary of external files, can changed in ng-cli's setting.
 * ↑
-* 
+ 
 * src/app/app.module.ts <- Main setting of the whole angular's project, example: csrftoken's name in header.
 * src/app/app-routing.module.ts <- Will handler the router of front-end.
 * src/app/home <- The example post form component.
@@ -135,3 +136,5 @@ $go run main.go
 
 * that's it. Open http://localhost:8080(if you use default port) at your browser.
 * be sure to check [IRIS](https://iris-go.com) and [angular-cli](https://github.com/angular/angular/cli)
+
+* [My web site 我的網站](https://douasin.com)
