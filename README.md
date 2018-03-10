@@ -106,6 +106,7 @@ $cd iris-angular
 * (需要npm, 最好去angular-cli的頁面取得最佳資訊)
 ```
 $npm install -g @angular/cli
+$npm build
 ```
 
 * Install iris and XORM's packages and dependencies:
