@@ -47,6 +47,7 @@ func main() {
 	if err != nil {
 		app.Logger().Fatalf("orm failed to initialized: %v", err)
 	}
+	defer orm.Close()
 
 	iris.RegisterOnInterrupt(func() {
 		orm.Close()
